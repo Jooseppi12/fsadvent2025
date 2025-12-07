@@ -17,7 +17,7 @@ jobs:
       - name: Build
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Add GitHub registry NuGet source
         run: 
