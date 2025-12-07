@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <style>
+        .grid {
+            display: flex;
+            --s: 100px; /* size */
+            --r: 1; /* ratio */
+            /* clip-path */
+            --h: 0.25;
+            --v: 0.35;
+            --hc: calc(clamp(0,var(--h),0.5) * var(--s));
+            --vc: calc(clamp(0,var(--v),0.5) * var(--s) * var(--r));
+            /*margin */
+            --mv: 4px; /* vertical */
+            --mh: calc(var(--mv) + (var(--s) - 2*var(--hc))/2); /* horizontal */
+            /* for the float*/
+            --f: calc(2*var(--s)*var(--r) + 4*var(--mv) - 2*var(--vc) - 2px);
+        }
+
+        .container {
+            font-size: 0; /*disable white space between inline block element */
+        }
+
+            .container div {
+                width: var(--s);
+                margin: var(--mv) var(--mh);
+                height: calc(var(--s)*var(--r));
+                display: inline-flex;
+                font-size: initial;
+                clip-path: polygon(var(--hc) 0, calc(100% - var(--hc)) 0,100% var(--vc),100% calc(100% - var(--vc)), calc(100% - var(--hc)) 100%,var(--hc) 100%,0 calc(100% - var(--vc)),0 var(--vc));
+                margin-bottom: calc(var(--mv) - var(--vc));
+                align-items: center;
+                justify-content: center;
+            }
+                .container div a, .container div a:hover {
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    font-size: 2em;
+                    color: unset;
+                }
+
+                .container div:has(> [data-tags*="programming"]) {
+                    background: green;
+                    color: white;
+                }
+
+                .container div:has(> a[data-tags*="sports"]) {
+                    background: brown;
+                    color: white;
+                }
+
+                .container div:has(> a[data-tags*="media"]) {
+                    background: blue;
+                    color: white;
+                }
+
+                .container div:has(> a[data-tags*="puzzles"]) {
+                    background: purple;
+                    color: white;
+                }
+
+                .container div:has(> a[data-tags*="boardgames"]) {
+                    background: yellow;
+                }
+
+                .container div:has(> a[data-tags*="shopping"]) {
+                    background: red;
+                }
+
+            .container::before {
+                content: "";
+                width: calc(var(--s)/2 + var(--mh));
+                float: left;
+                height: 135%;
+                shape-outside: repeating-linear-gradient( #0000 0 calc(var(--f) - 2px), #000 0 var(--f));
+            }
+
+        .panel {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 10px;
+            background: #fff;
+            font-family: sans-serif;
+            opacity: .5
+        }
+
+            .panel:hover {
+                opacity: 1
+            }
+
+            .panel > div:not(:last-child) {
+                border-bottom: 1px solid;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+
+        *, *::before {
+            transition: 0.5s linear
+        }
+
+        .bookmark {
+            display: block;
+        }
+
+        .bookmark.hidden {
+            display: none;
+        }
+        .searchbox {
+            margin-bottom: 1.5em;
+        }
+    </style>
+    <style>
+        /* Sticky footer styles */
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            /* Margin bottom by footer height */
+            margin-bottom: 60px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 60px;
+            background-color: #f5f5f5;
+        }
+
+        .container .text-muted {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="cnt">
+        <div><h1><a href="/bookmarks.html">List</a></h1></div><div class="grid"><div class="container"><div>
+                <a href="https://github.com" data-tags="programming" target="_blank">
+                    <span>g</span>
+                </a>
+            </div><div>
+                <a href="https://stackoverflow.com" data-tags="programming" target="_blank">
+                    <span>s</span>
+                </a>
+            </div><div>
+                <a href="https://boardgamegeek.com" data-tags="boardgames" target="_blank">
+                    <span>b</span>
+                </a>
+            </div><div>
+                <a href="https://letterboxd.com" data-tags="media,movies" target="_blank">
+                    <span>l</span>
+                </a>
+            </div><div>
+                <a href="https://www.pdc.tv" data-tags="sports" target="_blank">
+                    <span>p</span>
+                </a>
+            </div><div>
+                <a href="https://www.premierleague.com" data-tags="sports" target="_blank">
+                    <span>p</span>
+                </a>
+            </div><div>
+                <a href="https://www.uefa.com/uefachampionsleague" data-tags="sports" target="_blank">
+                    <span>u</span>
+                </a>
+            </div><div>
+                <a href="https://youtube.com" data-tags="media" target="_blank">
+                    <span>y</span>
+                </a>
+            </div><div>
+                <a href="https://twitch.com" data-tags="media" target="_blank">
+                    <span>t</span>
+                </a>
+            </div><div>
+                <a href="https://cluesbysam.com" data-tags="puzzles" target="_blank">
+                    <span>c</span>
+                </a>
+            </div><div>
+                <a href="https://fiaformulae.com" data-tags="sports,motorsports" target="_blank">
+                    <span>f</span>
+                </a>
+            </div><div>
+                <a href="https://amazon.de" data-tags="shopping" target="_blank">
+                    <span>a</span>
+                </a>
+            </div><div>
+                <a href="https://formula1.com" data-tags="sports,motorsports" target="_blank">
+                    <span>f</span>
+                </a>
+            </div></div></div>
+    </div>
+    
+<div style="display:none" ws-children-template="GridItem"><div>
+                <a href="${Url}" data-tags="${Tags}" target="_blank">
+                    <span>${InitialCharacter}</span>
+                </a>
+            </div></div><div style="display:none" ws-children-template="Search"><div class="searchbox">
+                <input type="text" ws-var="SearchText" />
+                <button ws-onclick="Search">Search</button>
+            </div></div></body>
+</html>
