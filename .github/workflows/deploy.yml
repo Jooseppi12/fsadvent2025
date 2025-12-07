@@ -31,7 +31,6 @@ jobs:
       # - run: dotnet fsi get-data.fsx
 
       - run: dotnet build
-        working-directory: Site
 
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
