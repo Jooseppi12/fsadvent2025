@@ -32,7 +32,7 @@ module Site =
         Templating.Main "Homepage" [
             div [] [
                 h1 [] [
-                    a [attr.href "/bookmarks.html"] [text "List"]
+                    a [attr.href "./bookmarks"] [text "List"]
                 ]
             ]
             div [attr.``class`` "grid"] [
@@ -60,7 +60,7 @@ module Site =
         Templating.Main "Bookmarks" [
             div [] [
                 h1 [] [
-                    a [attr.href "/"] [text "Home"]
+                    a [attr.href "./"] [text "Home"]
                 ]
             ]
             div [] [
