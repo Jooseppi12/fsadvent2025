@@ -1,0 +1,118 @@
+[
+  {
+    "url": "https://github.com",
+    "homepage": true,
+    "tags": [
+      "programming"
+    ]
+  },
+  {
+    "url": "https://stackoverflow.com",
+    "homepage": true,
+    "tags": [
+      "programming"
+    ]
+  },
+  {
+    "url": "https://boardgamegeek.com",
+    "homepage": true,
+    "tags": [
+      "boardgames"
+    ]
+  },
+  {
+    "url": "https://letterboxd.com",
+    "homepage": true,
+    "tags": [
+      "media",
+      "movies"
+    ]
+  },
+  {
+    "url": "https://www.pdc.tv",
+    "homepage": true,
+    "tags": [
+      "sports"
+    ]
+  },
+  {
+    "url": "https://www.premierleague.com",
+    "homepage": true,
+    "tags": [
+      "sports"
+    ]
+  },
+  {
+    "url": "https://www.uefa.com/uefachampionsleague",
+    "homepage": true,
+    "tags": [
+      "sports"
+    ]
+  },
+  {
+    "url": "https://youtube.com",
+    "homepage": true,
+    "tags": [
+      "media"
+    ]
+  },
+  {
+    "url": "https://twitch.com",
+    "homepage": true,
+    "tags": [
+      "media"
+    ]
+  },
+  {
+    "url": "https://cluesbysam.com",
+    "homepage": true,
+    "tags": [
+      "puzzles"
+    ]
+  },
+  {
+    "url": "https://fiaformulae.com",
+    "homepage": true,
+    "tags": [
+      "sports",
+      "motorsports"
+    ]
+  },
+  {
+    "url": "https://amazon.de",
+    "homepage": true,
+    "tags": [
+      "shopping"
+    ]
+  },
+  {
+    "url": "https://formula1.com",
+    "homepage": true,
+    "tags": [
+      "sports",
+      "motorsports"
+    ]
+  },
+  {
+    "url": "https://sergeytihon.com/2025/11/03/f-advent-calendar-in-english-2025/",
+    "tags": [
+      "programming",
+      "fsadvent"
+    ]
+  },
+  {
+    "url": "https://nba.com",
+    "tags": [
+      "sports",
+      "nba"
+    ]
+  },
+  {
+    "url": "https://nfl.com",
+    "tags": [
+      "sports",
+      "nfl"
+    ]
+  }
+
+]
